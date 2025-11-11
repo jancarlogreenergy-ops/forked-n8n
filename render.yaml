@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    region: oregon          # any region is fine
+    plan: free              # change to starter/pro if you need more RAM
+
+    # Use the official pre-built image – NO BUILD, NO ./compiled
+    dockerImage: docker.io/n8nio/n8n:latest
+
+    # n8n listens on port 5678 inside the container
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: N8N_HOST
+        value: JC_Workspace.onrender.com   # ← CHANGE THIS LATER
+      - key: N8N_PROTOCOL
+        value: https
+      - key: N8N_PORT
+        value: 5678
+      - key: WEBHOOK_URL
+        value: https://JC_Workspace.onrender.com/

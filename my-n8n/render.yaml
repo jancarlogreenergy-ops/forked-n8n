@@ -13,10 +13,10 @@ services:
       - key: NODE_ENV
         value: production
       - key: N8N_HOST
-        value: your-service-name.onrender.com   # ← CHANGE THIS LATER
+        value: JC_Workspace.onrender.com   # ← CHANGE THIS LATER
       - key: N8N_PROTOCOL
         value: https
       - key: N8N_PORT
         value: 5678
       - key: WEBHOOK_URL
-        value: https://your-service-name.onrender.com/
+        value: https://JC_Workspace.onrender.com/
